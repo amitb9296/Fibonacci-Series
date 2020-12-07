@@ -21,6 +21,6 @@ The ASMD chart has three states. The IDLE state indicates that the circuit is cu
                   n  <-- n - 1
 The first two RT operations obtain a new value and store the two most recently calculated values in t1 and t0. The third RT operation decrements the iteration index. The iteration ended when n reaches 1 or its initial value is 0 [i.e., fib(0)].
 
-NOTE: The new values of the t1 and t0 registers are loaded at the same time when the FSMD exits the OPERATE state (i.e., at the next rising edge of the clock). Thus, the original value of t1,not t1 + tO , is stored to t0. 
+NOTE: The new values of the t1 and t0 registers are loaded at the same time when the FSMD exits the OPERATE state (i.e., at the next rising edge of the clock). Thus, the original value of t1,not (t1 + t0) , is stored to t0. 
 
 The purpose of the done state is to generate the one-clock-cycle done_tick signal to indicate completion of the computation.
