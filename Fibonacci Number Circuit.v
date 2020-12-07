@@ -52,7 +52,7 @@ module Fibonacci_Number_Circuit
 
 			case (state_reg)
 				IDLE	:	begin
-							ready	=	1'b1;
+							ready		=	1'b1;
 							if(start)
 							  begin
 							    t0_next	=	0;
@@ -81,7 +81,7 @@ module Fibonacci_Number_Circuit
 							  state_next	=	IDLE;
 						end
 
-				default :	state_next 	=	IDLE;
+				default :	state_next 		=	IDLE;
 			endcase
 		end
 
